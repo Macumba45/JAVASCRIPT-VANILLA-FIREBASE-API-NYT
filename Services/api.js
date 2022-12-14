@@ -1,9 +1,16 @@
-function pruebaDeMierdad() {
+const allListBooks = async () => {
 
-    return data
+    try {
+
+        const listBooks = await fetch('https://dog.ceo/api/breeds/list/all')
+        console.log(await listBooks.json())
+
+    } catch (error) {
+
+        console.log(error)
+
+    }
+
 }
 
-function pruebaDeMierdad() {
-
-    return data
-}
+allListBooks()
