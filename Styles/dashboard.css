@@ -53,17 +53,3 @@ h2 {
     align-items: center;
     border-radius: 10px;
 }
-
-
-footer {
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-}
-
-
-.parrafoFooter {
-    color: white;
-}
