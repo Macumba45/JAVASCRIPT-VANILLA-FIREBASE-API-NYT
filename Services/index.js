@@ -11,9 +11,7 @@ async function postAllListBooks() {
     for (let i = 0; i < arrListNames.length; i++) {
 
         const currentName = arrListNames[i]
-
-        console.log(currentName)
-
+        // console.log(arrListNames[i])
 
         const actualListElementContainer = document.createElement('div')
         actualListElementContainer.setAttribute("id", "listBooksHijo")
