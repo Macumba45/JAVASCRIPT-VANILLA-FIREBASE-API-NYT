@@ -1,9 +1,19 @@
 const fetchListBooks = async () => {
 
+    const arrListNames = []
+
     try {
-        // const key = KF9ASDfmvWA3uXGbVU3FIPT5iWhQoPsB
         const listBooks = await fetch('https://api.nytimes.com/svc/books/v3/lists/names.json?api-key=KF9ASDfmvWA3uXGbVU3FIPT5iWhQoPsB')
-        console.log(await listBooks.json())
+        const resultadoApi = await listBooks.json()
+
+        for (let i = 0; i < resultadoApi.num_results; i++) {
+
+            const elementoActual = resultadoApi.results[i]
+            const listBooksActual = elementoActual.list_name
+            arrListNames.push(listBooksActual)
+
+        }
+
 
     } catch (error) {
 
@@ -11,23 +21,8 @@ const fetchListBooks = async () => {
 
     }
 
-}
-
-fetchListBooks()
-
-
-
-for (const key of object) {
+    return arrListNames
 
 }
-
-
-
-
-
-
-
-
-
 
 

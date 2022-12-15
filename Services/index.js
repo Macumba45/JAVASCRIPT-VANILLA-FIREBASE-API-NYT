@@ -6,7 +6,25 @@ prueba.setAttribute("id", "listBooks") // Con este metodo le añado un atributo 
 async function postAllListBooks() {
 
     const postAllListBooks = document.getElementById('listBooks')
-    console.log(postAllListBooks)
+    const arrListNames = await fetchListBooks()
+
+    for (let i = 0; i < arrListNames.length; i++) {
+
+        const currentName = arrListNames[i]
+
+        console.log(currentName)
+
+
+        const actualListElementContainer = document.createElement('div')
+        actualListElementContainer.setAttribute("id", "listBooksHijo")
+        const actualListElementTitle = document.createElement('p')
+        actualListElementTitle.setAttribute("id", "tituloLibro")
+        actualListElementContainer.appendChild(actualListElementTitle)
+        actualListElementTitle.innerText = currentName
+        postAllListBooks.appendChild(actualListElementContainer)
+
+    }
+
 }
 
 
