@@ -38,26 +38,27 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
 
 }
 
 #listBooks {
-    display: grid;
+    /* display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /* border: 1px solid rgb(255, 0, 0); */
-    border-radius: 10px;
+    border-radius: 10px; */
 
 }
 
 #listBooksHijo {
+
+
     border: 2px solid black;
     margin: 0 10px 10px 10px;
-    width: 200px;
+    width: 400px;
     height: 200px;
+
 
 }
 
