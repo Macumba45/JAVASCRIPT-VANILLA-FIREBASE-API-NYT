@@ -29,6 +29,19 @@ async function postAllListBooks() {
 postAllListBooks()
 
 
+async function postOldDates() {
+    const postOldDates = document.getElementById('listBooks')
+    const arrOldDates = await fetchOldBooks()
+    console.log(postOldDates)
+
+    for (let i = 0; i < arrOldDates.length; i++) {
+        console.log(arrOldDates[i])
+    }
+}
+
+
+postOldDates()
+
 
 
 // const tituloh2 = document.getElementById('titleBooks')
