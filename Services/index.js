@@ -3,6 +3,18 @@ const prueba = allBooks.appendChild(document.createElement('div')) // Le añado 
 prueba.setAttribute("id", "listBooks") // Con este metodo le añado un atributo al DIV con ID
 
 
+async function postAllListBooks() {
+
+    const postAllListBooks = document.getElementById('listBooks')
+    console.log(postAllListBooks)
+}
+
+
+postAllListBooks()
+
+
+
+
 // const tituloh2 = document.getElementById('titleBooks')
 // const titulo = document.createElement('div')
 // console.log(titulo)
