@@ -1,9 +1,10 @@
 const localStorageKeyBooks = 'books'
-const localStorageKeyOldDate = "oldDate"
 
 const fetchListBooks = async () => {
 
     let list = JSON.parse(window.localStorage.getItem("localStorageKeyBooks"));
+
+    console.log(list)
 
 
 
