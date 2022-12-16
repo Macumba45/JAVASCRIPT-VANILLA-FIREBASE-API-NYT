@@ -8,7 +8,6 @@ async function postAllData() {
 
     const postAllListBooks = document.getElementById('listBooks')
     const list = await fetchListBooks()
-    console.log(list)
 
     for (let i = 0; i < list.length; i++) {
 
@@ -34,10 +33,15 @@ async function postAllData() {
         elementUpdated.setAttribute("id", "dateUpdateRange")
         elementUpdated.innerText = ("Updated:" + ' ' + item.updated)
 
+        const button = document.createElement("button")
+        button.setAttribute("id", "buttonDetails")
+        button.innerText = ("Ver más")
+
         actualListElementContainer.appendChild(elementTitle)
         actualListElementContainer.appendChild(elementDate)
         actualListElementContainer.appendChild(elementDateUpdate)
         actualListElementContainer.appendChild(elementUpdated)
+        actualListElementContainer.appendChild(button)
         postAllListBooks.appendChild(actualListElementContainer)
     }
 

@@ -3,7 +3,9 @@ const localStorageKeyOldDate = "oldDate"
 
 const fetchListBooks = async () => {
 
-    let list = JSON.parse(window.localStorage.getItem("arrListNames"));
+    let list = JSON.parse(window.localStorage.getItem("localStorageKeyBooks"));
+
+
 
     if (!list) {
         try {
