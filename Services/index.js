@@ -3,7 +3,7 @@ const prueba = allBooks.appendChild(document.createElement('div')) // Le añado 
 prueba.setAttribute("id", "listBooks") // Con este metodo le añado un atributo al DIV con ID
 
 
-async function postAllListBooks() {
+async function postAllData() {
 
     const postAllListBooks = document.getElementById('listBooks')
     const arrListNames = await fetchListBooks()
@@ -11,8 +11,6 @@ async function postAllListBooks() {
     for (let i = 0; i < arrListNames.length; i++) {
 
         const currentName = arrListNames[i]
-        // console.log(arrListNames[i])
-
         const actualListElementContainer = document.createElement('div')
         actualListElementContainer.setAttribute("id", "listBooksHijo")
         const actualListElementTitle = document.createElement('p')
@@ -20,28 +18,56 @@ async function postAllListBooks() {
         actualListElementContainer.appendChild(actualListElementTitle)
         actualListElementTitle.innerText = currentName
         postAllListBooks.appendChild(actualListElementContainer)
-
     }
 
-}
 
 
-postAllListBooks()
-
-
-async function postOldDates() {
-
-    const postOldDates = document.getElementById('listBooks')
+    const postOldDates = document.getElementById('listBooksHijo')
     const arrOldDates = await fetchOldBooks()
-    console.log(postOldDates)
 
     for (let i = 0; i < arrOldDates.length; i++) {
-        console.log(arrOldDates[i])
+        const oldDateCurrent = arrOldDates[i]
+        const actualListElementDate = document.createElement('p')
+        actualListElementDate.setAttribute("id", "oldDatePArrafo")
+        actualListElementDate.innerText = ("Fecha vieja:" + ' ' + oldDateCurrent)
+        postOldDates.appendChild(actualListElementDate)
     }
+
 }
 
+postAllData()
 
-postOldDates()
+
+// async function postOldDates() {
+
+//     const postOldDates = document.querySelector("#listBooks")
+//     console.log(postOldDates)
+//     const arrOldDates = await fetchOldBooks()
+//     // console.log(postOldDates)
+
+//     for (let i = 0; i < arrOldDates.length; i++) {
+//         const oldDateCurrent = arrOldDates[i]
+
+
+//         // const actualDateElementContainer = document.createElement('div')
+//         // actualDateElementContainer.setAttribute("id", "oldDate")
+//         const actualListElementDate = document.createElement('p')
+//         actualListElementDate.setAttribute("id", "oldDatePArrafo")
+//         actualListElementDate.innerText = oldDateCurrent
+//         postOldDates.appendChild(actualListElementDate)
+
+//         // actualListElementDate.appendChild(actualDateElementContainer)
+//         // actualDateElementContainer.appendChild(postOldDates)
+
+//         // console.log(actualDateElementContainer)
+
+
+
+//     }
+// }
+
+
+// postOldDates()
 
 
 
