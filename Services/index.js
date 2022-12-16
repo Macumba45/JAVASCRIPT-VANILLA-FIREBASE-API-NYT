@@ -35,7 +35,7 @@ async function postAllData() {
 
         const button = document.createElement("button")
         button.setAttribute("id", "buttonDetails")
-        button.innerText = ("Ver más")
+        button.innerText = ("Read more")
 
         actualListElementContainer.appendChild(elementTitle)
         actualListElementContainer.appendChild(elementDate)

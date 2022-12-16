@@ -20,6 +20,8 @@ const fetchListBooks = async () => {
         }
     }
 
+    console.log(list)
+
     return list
 }
 
