@@ -1,6 +1,7 @@
 const allBooks = document.getElementById('allListBooks') // Selecciono el elemento del HTML 
 const prueba = allBooks.appendChild(document.createElement('div')) // Le añado al "id" padre un elemento hijo DIV
 prueba.setAttribute("id", "listBooks") // Con este metodo le añado un atributo al DIV con ID
+prueba.setAttribute("class", "listBooks")
 
 
 async function postAllData() {
@@ -13,17 +14,22 @@ async function postAllData() {
         const currentName = arrListNames[i]
         const actualListElementContainer = document.createElement('div')
         actualListElementContainer.setAttribute("id", "listBooksHijo")
+        actualListElementContainer.setAttribute("class", "listBooksHijo")
+
         const actualListElementTitle = document.createElement('p')
         actualListElementTitle.setAttribute("id", "tituloLibro")
         actualListElementContainer.appendChild(actualListElementTitle)
         actualListElementTitle.innerText = currentName
         postAllListBooks.appendChild(actualListElementContainer)
+
+        console.log(actualListElementContainer)
     }
 
 
 
     const postOldDates = document.getElementById('listBooksHijo')
     const arrOldDates = await fetchOldBooks()
+
 
     for (let i = 0; i < arrOldDates.length; i++) {
         const oldDateCurrent = arrOldDates[i]

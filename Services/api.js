@@ -30,24 +30,35 @@ const fetchListBooks = async () => {
 
 const fetchOldBooks = async () => {
 
-    arrOldDates = []
+    let arrOldDates = JSON.parse(window.localStorage.getItem("arrOldDates"));
 
-    try {
 
-        const oldDateBooks = await fetch('https://api.nytimes.com/svc/books/v3/lists/names.json?api-key=KF9ASDfmvWA3uXGbVU3FIPT5iWhQoPsB')
-        const oldDate = await oldDateBooks.json()
 
-        for (let i = 0; i < oldDate.num_results; i++) {
+    if (arrOldDates === null) {
 
-            const oldDateCurrent = oldDate.results[i]
-            const listOldDate = oldDateCurrent.oldest_published_date
-            arrOldDates.push(listOldDate)
+        arrOldDates = []
+
+        try {
+
+            const oldDateBooks = await fetch('https://api.nytimes.com/svc/books/v3/lists/names.json?api-key=KF9ASDfmvWA3uXGbVU3FIPT5iWhQoPsB')
+            const oldDate = await oldDateBooks.json()
+
+            for (let i = 0; i < oldDate.num_results; i++) {
+
+                const oldDateCurrent = oldDate.results[i]
+                const listOldDate = oldDateCurrent.oldest_published_date
+                arrOldDates.push(listOldDate)
+            }
+
+            window.localStorage.setItem("arrOldDates", JSON.stringify(arrOldDates))
+
+
+
+        } catch (error) {
+
+            console.log(error)
+
         }
-
-
-    } catch (error) {
-
-        console.log(error)
 
     }
 
