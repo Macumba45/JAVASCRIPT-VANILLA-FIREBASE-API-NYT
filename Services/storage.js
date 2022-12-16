@@ -1,1 +1,0 @@
-// const listBooksStorage = window.localStorage.setItem("resultadoApi", JSON.stringify(resultadoApi))
