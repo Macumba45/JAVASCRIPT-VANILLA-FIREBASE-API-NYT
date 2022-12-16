@@ -33,8 +33,9 @@ async function postAllData() {
         elementUpdated.setAttribute("id", "dateUpdateRange")
         elementUpdated.innerText = ("Updated:" + ' ' + item.updated)
 
-        const button = document.createElement("button")
+        const button = document.createElement("a")
         button.setAttribute("id", "buttonDetails")
+        button.setAttribute("href", `./details.html?${item.list_name}`)
         button.innerText = ("Read more")
 
         actualListElementContainer.appendChild(elementTitle)

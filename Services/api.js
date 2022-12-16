@@ -2,9 +2,7 @@ const localStorageKeyBooks = 'books'
 
 const fetchListBooks = async () => {
 
-    let list = JSON.parse(window.localStorage.getItem("localStorageKeyBooks"));
-
-    console.log(list)
+    let list = JSON.parse(window.localStorage.getItem(localStorageKeyBooks));
 
 
 
@@ -21,10 +19,25 @@ const fetchListBooks = async () => {
         }
     }
 
-    console.log(list)
+
 
     return list
 }
+
+
+
+const bookDetails = async () => {
+    try {
+        const response = await fetch('https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=KF9ASDfmvWA3uXGbVU3FIPT5iWhQoPsB')
+        const bookDetails = await response.json()
+        console.log(bookDetails)
+
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+bookDetails()
 
 
 
