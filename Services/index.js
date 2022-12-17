@@ -10,7 +10,7 @@ async function postAllData() {
 
     const postAllListBooks = document.getElementById('listBooks')
     const list = await fetchListBooks()
-    
+
     spinnerElement.setAttribute('class', 'hidden')
     allBooks.removeAttribute('class', 'hidden')
 
@@ -38,8 +38,9 @@ async function postAllData() {
         elementUpdated.setAttribute("id", "dateUpdateRange")
         elementUpdated.innerText = ("Updated:" + ' ' + item.updated)
 
-        const button = document.createElement("button")
+        const button = document.createElement("a")
         button.setAttribute("id", "buttonDetails")
+        button.setAttribute("href", "./details.html")
         button.innerText = ("Read more")
 
         actualListElementContainer.appendChild(elementTitle)
