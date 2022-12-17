@@ -1,5 +1,4 @@
 const spinnerElement = document.getElementById("spinner");
-
 const allBooks = document.getElementById('allListBooks') // Selecciono el elemento del HTML 
 const prueba = allBooks.appendChild(document.createElement('div')) // Le añado al "id" padre un elemento hijo DIV
 prueba.setAttribute("id", "listBooks") // Con este metodo le añado un atributo al DIV con ID
@@ -10,6 +9,7 @@ async function postAllData() {
 
         const postAllListBooks = document.getElementById('listBooks')
         const list = await fetchListBooks()
+
 
         spinnerElement.setAttribute('class', 'hidden')
         allBooks.removeAttribute('class', 'hidden')
@@ -41,8 +41,13 @@ async function postAllData() {
                 const button = document.createElement("a")
                 button.setAttribute("id", "buttonDetails")
 
-                button.setAttribute("href", "./details.html")
+                button.setAttribute("href", "./views/details.html")
                 button.innerText = ("Read more")
+
+                button.onclick = () => {
+                        localStorage.setItem(localStorageListName, item.list_name)
+
+                }
 
                 actualListElementContainer.appendChild(elementTitle)
                 actualListElementContainer.appendChild(elementDate)
@@ -55,3 +60,8 @@ async function postAllData() {
 }
 
 postAllData()
+
+
+
+
+
