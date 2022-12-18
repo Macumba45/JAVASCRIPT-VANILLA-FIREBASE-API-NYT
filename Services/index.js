@@ -49,12 +49,19 @@ async function postAllData() {
 
                 }
 
+
+                const lineBook = document.createElement('hr')
+                lineBook.setAttribute("id", "lineaHr")
+
+
                 actualListElementContainer.appendChild(elementTitle)
+                actualListElementContainer.appendChild(lineBook)
                 actualListElementContainer.appendChild(elementDate)
                 actualListElementContainer.appendChild(elementDateUpdate)
                 actualListElementContainer.appendChild(elementUpdated)
                 actualListElementContainer.appendChild(button)
                 postAllListBooks.appendChild(actualListElementContainer)
+
         }
 
 }
