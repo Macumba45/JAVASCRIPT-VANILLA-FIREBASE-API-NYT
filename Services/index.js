@@ -41,7 +41,7 @@ async function postAllData() {
                 const button = document.createElement("a")
                 button.setAttribute("id", "buttonDetails")
 
-                button.setAttribute("href", "./views/details.html")
+                button.setAttribute("href", "../views/details.html")
                 button.innerText = ("Read more")
 
                 button.onclick = () => {
