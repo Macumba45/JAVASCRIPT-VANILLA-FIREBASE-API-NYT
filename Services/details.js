@@ -19,11 +19,14 @@ async function callBookDetails() {
     listNameBook.innerText = selectedListName
 
 
+
+
     for (const book of bookDetails.results.books) {
 
         const postBookDetails = document.getElementById('bookDetails')
         const actualDetailBook = postBookDetails.appendChild(document.createElement('div'))
         actualDetailBook.setAttribute("id", "allBooks")
+
 
         const titleBooks = book.title
         const allTitleBook = document.createElement('h3')
@@ -45,14 +48,19 @@ async function callBookDetails() {
         elementDescription.setAttribute("id", "descriptionBook")
         elementDescription.innerText = descriptionBook
 
-        const buttonAmazonText = "Watch in Amazon"
+        const buttonAmazonText = "Buy at"
         const buyAmazon = book.amazon_product_url
         const buttonAmazonContainer = document.createElement('div')
         buttonAmazonContainer.setAttribute("id", "divButton")
         const buttonAmazon = document.createElement('a')
         buttonAmazon.setAttribute("id", "buttonAmazon")
         buttonAmazon.setAttribute("href", buyAmazon)
+        const buttonImgElement = document.createElement('img')
+        buttonImgElement.setAttribute("id", "amazonPic")
+        buttonImgElement.setAttribute('src', '../Img/icons8-amazon-120.png')
+
         buttonAmazon.innerText = buttonAmazonText
+        buttonAmazon.appendChild(buttonImgElement)
 
         actualDetailBook.appendChild(allTitleBook)
         actualDetailBook.appendChild(showImg)
@@ -64,7 +72,7 @@ async function callBookDetails() {
 
     }
 
-    postAllDetails.appendChild(listNameBook)
+    // postAllDetails.appendChild(listNameBook)
 
 
 }
