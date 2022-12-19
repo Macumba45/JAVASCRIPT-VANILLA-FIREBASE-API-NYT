@@ -18,11 +18,6 @@ async function callBookDetails() {
     listNameBook.setAttribute("id", "listBookName")
     listNameBook.innerText = selectedListName
 
-    const buttonBack = document.createElement('input')
-    buttonBack.setAttribute("type", "button")
-    buttonBack.setAttribute("value", "Go back")
-    buttonBack.setAttribute("onclick", "history.back()")
-    postAllDetails.appendChild(buttonBack)
 
     for (const book of bookDetails.results.books) {
 
@@ -52,6 +47,8 @@ async function callBookDetails() {
 
         const buttonAmazonText = "Watch in Amazon"
         const buyAmazon = book.amazon_product_url
+        const buttonAmazonContainer = document.createElement('div')
+        buttonAmazonContainer.setAttribute("id", "divButton")
         const buttonAmazon = document.createElement('a')
         buttonAmazon.setAttribute("id", "buttonAmazon")
         buttonAmazon.setAttribute("href", buyAmazon)
@@ -61,7 +58,9 @@ async function callBookDetails() {
         actualDetailBook.appendChild(showImg)
         actualDetailBook.appendChild(elementWeekList)
         actualDetailBook.appendChild(elementDescription)
-        actualDetailBook.appendChild(buttonAmazon)
+        buttonAmazonContainer.appendChild(buttonAmazon)
+        actualDetailBook.appendChild(buttonAmazonContainer)
+
 
     }
 
