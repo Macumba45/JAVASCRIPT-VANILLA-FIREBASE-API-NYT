@@ -32,6 +32,11 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: xx-large;
     margin: 10px;
+
+}
+
+#listNames {
+    display: flex;
 }
 
 #listBookName {
@@ -64,16 +69,112 @@
     border: 2px solid black;
     margin: 0 10px 30px 10px;
     width: 180px;
-    height: 300px;
+    height: 400px;
+    display: block;
+
+
+
+
+}
+
+#titleBook {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1em;
+    text-align: center;
+    background-color: black;
+    color: white;
+    background-color: black;
 
 
 }
 
 #imgBooks {
 
-    width: 100px;
+    width: 180px;
+    height: 180px;
+    align-items: center;
+
+
 }
 
+#weekList {
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: black;
+    color: white;
+    font-size: 0.8em;
+
+}
+
+#descriptionBook {
+
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 0.9em;
+    margin: 10px 8px 20px 8px;
+
+}
+
+/* a {
+    position: absolute;
+    bottom: 0;
+} */
+
+#buttonAmazon {
+    background-color: rgb(254, 153, 1);
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 0.8em;
+    font-weight: 300;
+    margin: 0 20px 0 20px;
+    border: 2px solid rgb(0, 0, 0);
+
+}
+
+#listNames {
+    display: flex;
+    justify-content: center;
+}
+
+
+#listNames>input {
+    position: sticky;
+    top: 0;
+}
+
+form {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    margin-left: 10px;
+    margin-top: 50px;
+}
+
+
+input {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: black;
+    text-align: center;
+    border: none;
+
+    cursor: pointer;
+
+    /* margin: 80px 0 0 10px; */
+
+}
+
+#divButton {
+    display: flex;
+    justify-content: center;
+
+}
 
 
 
