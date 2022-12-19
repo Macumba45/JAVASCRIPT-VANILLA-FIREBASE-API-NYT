@@ -50,7 +50,8 @@ async function callBookDetails() {
         const descriptionBook = book.description
         const elementDescription = document.createElement('p')
         elementDescription.setAttribute("id", "descriptionBook")
-        elementDescription.innerText = descriptionBook
+        elementDescription.innerText = "Description: " + descriptionBook
+
 
         const buttonAmazonText = "Buy at"
         const buyAmazon = book.amazon_product_url
@@ -72,6 +73,7 @@ async function callBookDetails() {
         actualDetailBook.appendChild(elementDescription)
         buttonAmazonContainer.appendChild(buttonAmazon)
         actualDetailBook.appendChild(buttonAmazonContainer)
+
 
 
     }
