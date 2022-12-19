@@ -57,7 +57,7 @@ h2 {
     border: 2px solid black;
     margin: 0 10px 20px 10px;
     width: 180px;
-    height: 200px;
+    height: 220px;
     text-align: center;
 
 }
@@ -81,6 +81,10 @@ h2 {
     color: white;
     text-align: center;
     font-weight: 300;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 hr {
