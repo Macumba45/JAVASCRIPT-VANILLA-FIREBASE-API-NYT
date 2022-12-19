@@ -20,12 +20,8 @@ const fetchListBooks = async () => {
         }
     }
 
-
-
     return list
 }
-
-
 
 
 const getBookDetails = async (listName) => {
@@ -41,6 +37,7 @@ const getBookDetails = async (listName) => {
 
         const response = await fetch(`https://api.nytimes.com/svc/books/v3/lists/current/${listName}.json?api-key=KF9ASDfmvWA3uXGbVU3FIPT5iWhQoPsB`)
         const bookDetails = await response.json()
+        window.localStorage.setItem(localStorageKeyDetails, JSON.stringify(bookDetails.results))
         return bookDetails
     } catch (error) {
         console.log(error)

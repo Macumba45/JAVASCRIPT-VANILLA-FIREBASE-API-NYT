@@ -1,17 +1,21 @@
+const spinnerElement = document.getElementById("spinner");
 const bookDetailsInfo = document.getElementById('bookBestSeller') // Selecciono el elemento del HTML 
 const bookDetailsContainer = bookDetailsInfo.appendChild(document.createElement('div')) // Le añado al "id" padre un elemento hijo DIV
 bookDetailsContainer.setAttribute("id", "bookDetails") // Con este metodo le añado un atributo al DIV con ID
 bookDetailsContainer.setAttribute("class", "bookDetails")
 
 
-
-
-
-
 async function callBookDetails() {
 
     const selectedListName = localStorage.getItem(localStorageListName)
     const bookDetails = await getBookDetails(selectedListName)
+
+    spinnerElement.setAttribute('class', 'hidden')
+    bookDetailsInfo.removeAttribute('class', 'hidden')
+
+
+
+    console.log(bookDetails.results)
 
     const postAllDetails = document.getElementById('listNames')
     const listNameBook = document.createElement('h4')

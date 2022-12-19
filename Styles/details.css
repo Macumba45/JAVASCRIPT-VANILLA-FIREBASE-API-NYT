@@ -78,8 +78,9 @@
     border: 2px solid black;
     margin: 10px 10px 30px 10px;
     width: 180px;
-    height: 450px;
+    height: 460px;
     display: block;
+    border-radius: 10px;
 
 
 
@@ -94,11 +95,14 @@
     background-color: black;
     color: white;
     background-color: black;
-    height: 40px;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     border: 2px solid orange;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
 
 
 
@@ -188,6 +192,48 @@ input {
     align-items: center;
 
 
+}
+
+
+.lds-hourglass {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 200px;
+    margin-top: 200px;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-hourglass:after {
+    content: "";
+    display: block;
+    border-radius: 50%;
+    width: 80%;
+    height: 80%;
+    margin-bottom: 200px;
+    border: solid 10px transparent;
+    border-top-color: black;
+    border-left-color: black;
+    border-radius: 50%;
+    animation: lds-hourglass 1.2s infinite;
+}
+
+@keyframes lds-hourglass {
+    0% {
+        transform: rotate(0);
+        animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+
+    50% {
+        transform: rotate(900deg);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+
+    100% {
+        transform: rotate(1800deg);
+    }
 }
 
 
