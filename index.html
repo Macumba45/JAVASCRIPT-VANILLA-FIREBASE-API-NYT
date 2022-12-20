@@ -5,10 +5,65 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login to New York Times</title>
+    <title>New York Times - Login</title>
+    <link rel="stylesheet" href="./Styles/reset.css">
+    <link rel="stylesheet" href="./Styles/login.css">
+    <script src="./Services/firebaseAuth.js"></script>
 </head>
 
 <body>
+
+    <video autoplay muted loop id="myVideo">
+        <source src="./Img/newyork.mp4" type="video/mp4">
+    </video>
+
+    <div id="background">
+        <div id="loginDiv">
+
+            <!-- <label for="email">Email:</label> -->
+            <img src="./Img/79-790806_new-york-times-logo-new-york-times-png.png" id="textLogin" alt="">
+            <!-- <p id="textLogin">Login to read</p> -->
+            <input src="./Img/icons8-circled-envelope-90.png" id="email" type="email" placeholder="Insert your email">
+            <!-- <label for="passWord">Password:</label> -->
+            <input id="password" type="password" placeholder="Insert your password" autocomplete="on">
+            <div id="buttonLoginDiv">
+                <button type="button" class="buttonLogin" onclick="userLogin()">Login</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <script type="module">
+
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyCNMRzUxZz83eKbMpCZxLHtHS7zroyU_5o",
+            authDomain: "bookapi-2e7aa.firebaseapp.com",
+            projectId: "bookapi-2e7aa",
+            storageBucket: "bookapi-2e7aa.appspot.com",
+            messagingSenderId: "954996866219",
+            appId: "1:954996866219:web:1da12c1f2e228c9de3cbee"
+        };
+        // Initialize Firebase
+        initializeApp(firebaseConfig);
+
+    </script>
+
+
 
 </body>
 
