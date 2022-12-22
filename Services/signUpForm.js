@@ -1,8 +1,9 @@
 import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js"
 import { auth } from './firebase.js'
+import { showMessage } from './showMessage.js'
 
 
-const signUpform = document.getElementById('form')
+const signUpform = document.getElementById('formRegister')
 
 signUpform.addEventListener('submit', async (e) => {
 
@@ -10,56 +11,35 @@ signUpform.addEventListener('submit', async (e) => {
 
     const email = document.getElementById('email').value
     const password = document.getElementById('password').value
-
-    // console.log(email, password)
+    const inputs = document.querySelectorAll('input');
+    inputs.forEach(input => {
+        input.value = '';
+    });
 
     try {
 
         const userCredentials = await createUserWithEmailAndPassword(auth, email, password)
         console.log(userCredentials)
 
+        showMessage("Your account have been created " + userCredentials.user.email)
+        window.location
+
+
     } catch (error) {
+        console.log(error)
 
         if (error.code === 'auth/email-already-in-use') {
-            alert('This email is already in used')
+            showMessage('This email is already in used', "error")
+        } else if (error.code === '') {
+            showMessage('Please, insert an email', "error")
         } else if (error.code === 'auth/invalid-email') {
-            alert('Invalid email')
+            showMessage('Invalid email', "error")
         } else if (error.code === 'auth/weak-password') {
-            alert('Password is too weak')
-        } else if (error.code) {
-            alert('Something went wrong')
+            showMessage('Password is too weak', "error")
+        } else if (error.code === "auth/internal-error") {
+            showMessage('Something went wrong', "error")
         }
-
-
-
-
 
     }
 
-
-
 })
-
-// let userLogin = () => {
-
-//     const email = document.getElementById('email').value
-//     const password = document.getElementById('password').value
-//     // console.log("email=" + ' ' + email + ' ' + "password=" + ' ' + password)
-
-
-//     const auth = getAuth();
-//     createUserWithEmailAndPassword(auth, email, password)
-//         .then((userCredential) => {
-//             // Signed in 
-//             const user = userCredential.user;
-//             // ...
-//         })
-//         .catch((error) => {
-//             const errorCode = error.code;
-//             const errorMessage = error.message;
-//             console.log(errorCode)
-//             console.log(errorMessage)
-//             // ..
-//         });
-
-// }

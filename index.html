@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./Styles/reset.css">
     <link rel="stylesheet" href="./Styles/nav.css">
     <link rel="stylesheet" href="./Styles/login.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <script src="./Services/main.js" type="module"></script>
 </head>
 
@@ -19,29 +20,20 @@
     </video>
 
     <nav id="nav">
-        <a href="./"> Sign Up</a>
-        <a href=""> Register</a>
+        <a onclick="loginForm()" class="logged-out"> Login</a>
+        <a onclick="registerForm()" class="logged-out"> Register</a>
+        <a onclick="" id="logout" class="logged-in"> Log Out</a>
 
     </nav>
 
     <div id="background">
-        <div id="loginDiv">
-
-            <form id="form">
-
-                <!-- <label for="email">Email:</label> -->
-                <img src="./Img/79-790806_new-york-times-logo-new-york-times-png.png" id="textLogin" alt="">
-                <!-- <p id="textLogin">Login to read</p> -->
-                <input src="./Img/icons8-circled-envelope-90.png" id="email" type="email"
-                    placeholder="Insert your email">
-                <!-- <label for="passWord">Password:</label> -->
-                <input id="password" type="password" placeholder="Insert your password" autocomplete="on">
-                <div id="buttonLoginDiv">
-                    <button type="submit" id="buttonLogin" class="buttonLogin">Register</button>
-                </div>
-            </form>
-        </div>
+        <div id="loginDiv"></div>
     </div>
+
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
 
 </body>
 
