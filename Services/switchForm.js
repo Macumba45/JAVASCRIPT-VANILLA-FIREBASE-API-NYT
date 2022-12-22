@@ -17,6 +17,20 @@ document.addEventListener("DOMContentLoaded", () => {
         loginForm.style.display = 'none'
     });
 
+    document.querySelector('#navLogin').addEventListener("click", (e) => {
+        e.preventDefault()
+        registerForm.style.display = 'none'
+        loginForm.style.display = 'flex'
+
+    });
+
+    document.querySelector('#navRegister').addEventListener("click", (e) => {
+        e.preventDefault()
+        registerForm.style.display = 'flex'
+        loginForm.style.display = 'none'
+
+    });
+
 
 
 })
