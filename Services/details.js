@@ -13,16 +13,10 @@ async function callBookDetails() {
     spinnerElement.setAttribute('class', 'hidden')
     bookDetailsInfo.removeAttribute('class', 'hidden')
 
-
-
-    console.log(bookDetails.results)
-
     const postAllDetails = document.getElementById('listNames')
     const listNameBook = document.createElement('h4')
     listNameBook.setAttribute("id", "listBookName")
     listNameBook.innerText = selectedListName
-
-
 
 
     for (const book of bookDetails.results.books) {
@@ -74,14 +68,10 @@ async function callBookDetails() {
         buttonAmazonContainer.appendChild(buttonAmazon)
         actualDetailBook.appendChild(buttonAmazonContainer)
 
-
-
     }
 
-    // postAllDetails.appendChild(listNameBook)
-
-
 }
+
 
 callBookDetails()
 

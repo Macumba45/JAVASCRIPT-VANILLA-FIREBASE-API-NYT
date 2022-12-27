@@ -4,6 +4,11 @@ const prueba = allBooks.appendChild(document.createElement('div')) // Le añado 
 prueba.setAttribute("id", "listBooks") // Con este metodo le añado un atributo al DIV con ID
 prueba.setAttribute("class", "listBooks")
 
+document.querySelector('#myProfile').addEventListener("click", (e) => {
+        e.preventDefault()
+        window.location.assign('../views/profile.html')
+
+});
 
 async function postAllData() {
 

@@ -1,8 +1,9 @@
-document.addEventListener("DOMContentLoaded", () => {
+const loadDocumentHTML = document.addEventListener("DOMContentLoaded", () => {
 
     const registerForm = document.querySelector('#formRegister')
     const loginForm = document.querySelector('#formLogin')
-    loginForm.style.display = 'none'
+
+    registerForm.style.display = 'none'
 
     document.querySelector('#alreadyRegistered').addEventListener("click", (e) => {
         e.preventDefault()
@@ -30,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
         loginForm.style.display = 'none'
 
     });
+
 
 
 

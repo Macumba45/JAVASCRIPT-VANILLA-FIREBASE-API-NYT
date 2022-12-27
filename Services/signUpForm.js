@@ -2,6 +2,9 @@ import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebase
 import { auth } from './firebase.js'
 import { showMessage } from './showMessage.js'
 
+const userInfoProfile = 'userInfo'
+
+
 
 const signUpform = document.getElementById('formRegister')
 
@@ -19,14 +22,22 @@ signUpform.addEventListener('submit', async (e) => {
     try {
 
         const userCredentials = await createUserWithEmailAndPassword(auth, email, password)
-        console.log(userCredentials)
+
+        window.localStorage.clear()
+        window.localStorage.setItem(userInfoProfile, JSON.stringify(userCredentials.user))
+
 
         showMessage("Your account have been created " + userCredentials.user.email)
-        window.location
+
+        setTimeout(function () {
+
+            window.location.assign('./views/dashboard.html')
+
+        }, 2000);
+
 
 
     } catch (error) {
-        console.log(error)
 
         if (error.code === 'auth/email-already-in-use') {
             showMessage('This email is already in used', "error")

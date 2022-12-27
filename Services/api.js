@@ -16,7 +16,7 @@ const fetchListBooks = async () => {
 
             }
         } catch (error) {
-            console.log(error)
+
         }
     }
 
@@ -40,7 +40,7 @@ const getBookDetails = async (listName) => {
         window.localStorage.setItem(localStorageKeyDetails, JSON.stringify(bookDetails.results))
         return bookDetails
     } catch (error) {
-        console.log(error)
+
     }
 }
 
