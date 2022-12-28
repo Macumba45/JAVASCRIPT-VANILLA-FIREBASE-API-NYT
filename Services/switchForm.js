@@ -7,6 +7,7 @@ const loadDocumentHTML = document.addEventListener("DOMContentLoaded", () => {
 
     document.querySelector('#alreadyRegistered').addEventListener("click", (e) => {
         e.preventDefault()
+
         registerForm.style.display = 'none'
         loginForm.style.display = 'flex'
 
@@ -31,8 +32,5 @@ const loadDocumentHTML = document.addEventListener("DOMContentLoaded", () => {
         loginForm.style.display = 'none'
 
     });
-
-
-
 
 })

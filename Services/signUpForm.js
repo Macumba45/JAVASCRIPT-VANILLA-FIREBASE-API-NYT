@@ -4,8 +4,6 @@ import { showMessage } from './showMessage.js'
 
 const userInfoProfile = 'userInfo'
 
-
-
 const signUpform = document.getElementById('formRegister')
 
 signUpform.addEventListener('submit', async (e) => {

@@ -41,7 +41,7 @@ if (userInfoGoogle) {
     hrDivisorProfile.setAttribute("id", "hrProfile")
     userContainer.appendChild(hrDivisorProfile)
 
-    userContainer.appendChild(userEmailVerified)
+    // userContainer.appendChild(userEmailVerified)
 
 
 }
