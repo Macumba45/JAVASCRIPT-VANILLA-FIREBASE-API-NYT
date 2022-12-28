@@ -52,7 +52,7 @@ body {
 
     width: 200px;
     border: 0.5px solid rgba(0, 0, 0, 0.135);
-    margin-top: 20px;
+    margin-top: 30px;
 
 
 
@@ -70,8 +70,9 @@ body {
 }
 
 #imgUser {
-    width: 50px;
-    margin-top: 20px;
+    width: 100px;
+    border-radius: 50px;
+    margin-top: 30px;
 
 }
 

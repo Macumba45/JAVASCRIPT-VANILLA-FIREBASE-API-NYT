@@ -11,10 +11,10 @@ if (userInfo) {
     userElementImg.setAttribute("id", "imgUser")
     userElementImg.setAttribute("src", "../img/icons8-female-profile-100.png")
 
-    const userTitleProfile = document.createElement('p')
-    userTitleProfile.setAttribute("id", "emailTitle")
-    const emailTitle = "Email"
-    userTitleProfile.innerText = (emailTitle)
+    // const userTitleProfile = document.createElement('p')
+    // userTitleProfile.setAttribute("id", "emailTitle")
+    // const emailTitle = "Email"
+    // userTitleProfile.innerText = (emailTitle)
 
     const userElementEmail = document.createElement('p')
     userElementEmail.setAttribute("id", "emailUser")
@@ -27,15 +27,13 @@ if (userInfo) {
     hrDivisorProfile.setAttribute("id", "hrProfile")
     userContainer.appendChild(hrDivisorProfile)
 
-
-    userContainer.appendChild(userTitleProfile)
-
+    userContainer.appendChild(userElementEmail)
 
     const hrDivisorProfile1 = document.createElement('hr')
     hrDivisorProfile1.setAttribute("id", "hrProfile")
     userContainer.appendChild(hrDivisorProfile1)
 
-    userContainer.appendChild(userElementEmail)
+
 
 
 }
