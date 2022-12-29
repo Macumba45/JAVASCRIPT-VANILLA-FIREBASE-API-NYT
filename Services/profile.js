@@ -9,12 +9,7 @@ if (userInfo) {
 
     const userElementImg = document.createElement('img')
     userElementImg.setAttribute("id", "imgUser")
-    userElementImg.setAttribute("src", "../img/icons8-female-profile-100.png")
-
-    // const userTitleProfile = document.createElement('p')
-    // userTitleProfile.setAttribute("id", "emailTitle")
-    // const emailTitle = "Email"
-    // userTitleProfile.innerText = (emailTitle)
+    userElementImg.setAttribute("src", "../Img/icons8-female-profile-100.png")
 
     const userElementEmail = document.createElement('p')
     userElementEmail.setAttribute("id", "emailUser")

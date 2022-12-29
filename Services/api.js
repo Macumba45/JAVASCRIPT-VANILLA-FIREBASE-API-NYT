@@ -33,8 +33,9 @@ const getBookDetails = async (listName) => {
     headerH1.innerText = headertitle
     header.appendChild(headerH1)
 
-    try {
+    JSON.parse(window.localStorage.getItem(localStorageKeyDetails));
 
+    try {
         const response = await fetch(`https://api.nytimes.com/svc/books/v3/lists/current/${listName}.json?api-key=KF9ASDfmvWA3uXGbVU3FIPT5iWhQoPsB`)
         const bookDetails = await response.json()
         window.localStorage.setItem(localStorageKeyDetails, JSON.stringify(bookDetails.results))
@@ -42,7 +43,12 @@ const getBookDetails = async (listName) => {
     } catch (error) {
 
     }
+
 }
+
+
+
+
 
 
 

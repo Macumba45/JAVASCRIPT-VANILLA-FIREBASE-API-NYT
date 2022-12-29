@@ -114,6 +114,7 @@ hr {
     font-size: small;
     padding: 5px;
     color: white;
+    font-weight: 400;
 }
 
 #dateUpdate {
@@ -121,6 +122,7 @@ hr {
     font-size: small;
     padding: 5px;
     color: white;
+    font-weight: 400;
 }
 
 #dateUpdateRange {
@@ -128,6 +130,7 @@ hr {
     font-size: small;
     padding: 5px;
     color: white;
+    font-weight: 900;
 }
 
 #buttonDetails {

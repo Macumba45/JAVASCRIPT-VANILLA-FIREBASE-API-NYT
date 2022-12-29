@@ -5,6 +5,7 @@ bookDetailsContainer.setAttribute("id", "bookDetails") // Con este metodo le añ
 bookDetailsContainer.setAttribute("class", "bookDetails")
 
 
+
 async function callBookDetails() {
 
     const selectedListName = localStorage.getItem(localStorageListName)
@@ -57,9 +58,21 @@ async function callBookDetails() {
         const buttonImgElement = document.createElement('img')
         buttonImgElement.setAttribute("id", "amazonPic")
         buttonImgElement.setAttribute('src', '../Img/icons8-amazon-120.png')
-
         buttonAmazon.innerText = buttonAmazonText
         buttonAmazon.appendChild(buttonImgElement)
+
+        const imgFavBookIcon = document.createElement('img')
+        imgFavBookIcon.setAttribute("id", "favBookIcon")
+        imgFavBookIcon.setAttribute("class", "classFavBookIcon")
+        imgFavBookIcon.setAttribute('src', '../Img/icons8-favorite-100.png')
+        buttonAmazonContainer.appendChild(imgFavBookIcon)
+
+        const imgFavBookIconFilled = document.createElement('img')
+        imgFavBookIconFilled.setAttribute("id", "favBookIconFilled")
+        imgFavBookIconFilled.setAttribute("class", "classFavBookIconFilled")
+        imgFavBookIconFilled.setAttribute('src', '../Img/icons8-favorite-100-filled.png')
+        buttonAmazonContainer.appendChild(imgFavBookIconFilled)
+
 
         actualDetailBook.appendChild(allTitleBook)
         actualDetailBook.appendChild(showImg)
@@ -68,9 +81,19 @@ async function callBookDetails() {
         buttonAmazonContainer.appendChild(buttonAmazon)
         actualDetailBook.appendChild(buttonAmazonContainer)
 
+        const imgElement = document.getElementById('favBookIcon')
+        const imgElementFilled = document.querySelectorAll('#favBookIconFilled')
+
+        for (const hearth of imgElementFilled) {
+            hearth.style.display = 'none'
+
+        }
     }
 
+
+
 }
+
 
 
 callBookDetails()

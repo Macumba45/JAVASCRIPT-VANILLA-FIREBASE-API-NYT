@@ -1,3 +1,4 @@
+import './videoLogin.js'
 import './loginForm.js'
 import './registerForm.js'
 import './switchForm.js'

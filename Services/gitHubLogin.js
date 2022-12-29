@@ -9,7 +9,7 @@ buttonRegistergitHub.addEventListener('click', async () => {
     try {
         const credentials = await signInWithPopup(auth, provider)
         console.log(credentials)
-        showMessageLoginFacebook('Welcome ' + credentials.user.displayName, 'success')
+        showMessageLoginGithub('Welcome ' + credentials.user.displayName, 'success')
 
         setTimeout(function () {
 
@@ -21,6 +21,7 @@ buttonRegistergitHub.addEventListener('click', async () => {
     } catch (error) {
         let errorCode = error.code;
         let errorMessage = error.message;
+
 
     }
 

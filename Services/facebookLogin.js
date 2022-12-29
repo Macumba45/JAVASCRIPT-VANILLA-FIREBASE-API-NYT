@@ -19,6 +19,7 @@ buttonRegisterFacebook.addEventListener('click', async () => {
     } catch (error) {
         let errorCode = error.code;
         let errorMessage = error.message;
+        console.log(errorCode)
 
     }
 

@@ -3,24 +3,40 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 200px;
-    margin-top: 200px;
+    margin-top: 340px;
     position: relative;
     width: 80px;
     height: 80px;
 }
 
 .lds-hourglass:after {
-    content: " ";
+    content: "";
     display: block;
     border-radius: 50%;
-    width: 80%;
-    height: 80%;
+    width: 40%;
+    height: 40%;
     margin-bottom: 80px;
     border: solid 10px transparent;
-    border-top-color: black;
-    border-left-color: black;
+    border-top-color: rgb(255, 255, 255);
+    border-left-color: rgb(255, 255, 255);
     border-radius: 50%;
     animation: lds-hourglass 1.2s infinite;
+}
+
+@keyframes lds-hourglass {
+    0% {
+        transform: rotate(0);
+        animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+
+    50% {
+        transform: rotate(900deg);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+
+    100% {
+        transform: rotate(1800deg);
+    }
 }
 
 @keyframes lds-hourglass {
