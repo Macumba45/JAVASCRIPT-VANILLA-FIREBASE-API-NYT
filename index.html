@@ -15,28 +15,10 @@
 
 <body>
 
-    <script>
 
-        const myVideoContainer = document.querySelector('body')
-        const myVideoMedia = document.createElement('video')
-        myVideoMedia.setAttribute("src", "./Img/Untitled.mp4")
-        myVideoMedia.setAttribute("id", "myVideoJS")
-        myVideoMedia.setAttribute("type", "video/mp4")
-        myVideoContainer.appendChild(myVideoMedia)
-
-        myVideoMedia.muted = true
-        myVideoMedia.autoplay = true
-        myVideoMedia.loop = true
-        myVideoMedia.playsinline = true
-        myVideoMedia.controls = true
-
-
-
-    </script>
-
-    <!-- <video autoplay muted loop playsinline id="myVideo">
-        <source src="./Img/newyork.mp4" type="video/mp4">
-    </video> -->
+    <video muted autoplay loop playsinline id="myVideo">
+        <source src="./Img/Untitled.mp4" type="video/mp4">
+    </video>
 
     <nav id="navLoginContainer">
         <a id="navLogin" class="logged-out"> Login</a>
