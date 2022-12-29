@@ -28,8 +28,8 @@ loginContainerForm.appendChild(inputPassword)
 const buttonContainer = document.createElement('div')
 buttonContainer.setAttribute("id", "buttonLoginDiv")
 const buttonRegister = document.createElement('button')
-const textButtonRegister = "Login"
-buttonRegister.innerText = (textButtonRegister)
+// const textButtonRegister = "Login"
+// buttonRegister.innerText = (textButtonRegister)
 buttonRegister.setAttribute("type", "submit")
 buttonRegister.setAttribute("id", "buttonLogin")
 buttonRegister.setAttribute("class", "buttonLogin")

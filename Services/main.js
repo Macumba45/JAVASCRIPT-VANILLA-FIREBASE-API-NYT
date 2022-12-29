@@ -1,4 +1,3 @@
-import './videoLogin.js'
 import './loginForm.js'
 import './registerForm.js'
 import './switchForm.js'
@@ -17,13 +16,6 @@ import './logout.js'
 onAuthStateChanged(auth, async (user) => {
 
     loginCheck(user)
-
-
-    // if (user) {
-    //     loginCheck(user)
-    // } else {
-
-    // }
 
 
 })

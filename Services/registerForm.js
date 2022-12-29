@@ -35,10 +35,10 @@ registerContainerForm.appendChild(alreadyRegistered)
 
 
 const buttonContainer = document.createElement('div')
-buttonContainer.setAttribute("id", "buttonLoginDiv")
+buttonContainer.setAttribute("id", "buttonLoginDivRegister")
 const buttonRegister = document.createElement('button')
-const textButtonRegister = "Register"
-buttonRegister.innerText = (textButtonRegister)
+// const textButtonRegister = "Register"
+// buttonRegister.innerText = (textButtonRegister)
 buttonRegister.setAttribute("type", "submit")
 buttonRegister.setAttribute("id", "buttonRegister")
 buttonRegister.setAttribute("class", "buttonLogin")
