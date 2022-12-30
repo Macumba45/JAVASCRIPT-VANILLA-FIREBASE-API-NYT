@@ -4,12 +4,7 @@ import { auth } from './firebase.js'
 onAuthStateChanged(auth, async (user) => {
 
     loginCheck(user)
-    console.log(user)
-
 })
-
-
-
 
 const loggedOutLink = document.querySelectorAll('.logged-out')
 const loggedInLinks = document.querySelectorAll('.logged-in')
