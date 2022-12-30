@@ -16,9 +16,17 @@
 
 <body>
 
-    <video autoplay muted controls playsinline preload="metadata" id="myVideo">
+
+
+    <video autoplay muted loop playsinline preload="metadata" id="myVideo">
         <source src="./Img/Untitled.mp4" type="video/mp4">
     </video>
+
+    <script>
+        const vid = document.getElementById("myVideo");
+        vid.autoplay = true;
+        vid.load();
+    </script>
 
     <nav id="navLoginContainer">
         <a id="navLogin" class="logged-out"> Login</a>
