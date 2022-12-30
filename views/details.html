@@ -5,38 +5,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Book API</title>
+    <title>Book details - NYT</title>
     <link rel="icon" type="image/x-icon" href="./Img/the_new_york_times.ico">
     <link rel="stylesheet" href="../Styles/reset.css">
     <link rel="stylesheet" href="../Styles/details.css">
     <link rel="stylesheet" href="../Styles/footer.css">
+    <link rel="stylesheet" href="../index.html">
+    <script src="../Services/loginCheck.js" type="module"></script>
+
 
 </head>
 
 <body>
 
     <header id="cabezera">
-
         <div id="listbook">
-
             <input type="button" value="Back" onclick="history.back()">
-
         </div>
-
     </header>
-
 
     <div class="lds-hourglass" id="spinner"></div>
 
+    <div id="listNames" class="hidden"></div>
 
-    <div id="listNames" class="hidden">
-
-    </div>
-
-    <div id="bookBestSeller">
-
-    </div>
-
+    <div id="bookBestSeller"></div>
 
     <footer id="footer">
         <div class="social">
@@ -45,15 +37,16 @@
             <a href="#"><img src="../Img/icons8-repositorio-48.png" alt="book"></a>
         </div>
         <div class="container">
-            <p class="copy">© 2022 Gonzalo y Manuel/ Todos los derechos reservados</p>
+            <p class="copy">Todos los derechos reservados © 2022</p>
         </div>
     </footer>
-
-
 
     <script src="../Services/api.js"></script>
     <script src="../Services/details.js"></script>
     <script src="../Services/favBooks.js"></script>
+
+
+
 
 </body>
 

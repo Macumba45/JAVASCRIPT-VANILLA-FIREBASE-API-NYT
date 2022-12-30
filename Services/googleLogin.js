@@ -4,7 +4,6 @@ import { showMessageLoginGoogle } from "./showMessageLoginGoogle.js";
 
 const userInfoProfileGoogle = 'userInfoGoogle'
 
-
 const buttonRegisterGoogle = document.getElementById('buttonRegisterGoogle')
 const loginForm = document.getElementById('formLogin')
 
@@ -34,6 +33,7 @@ buttonRegisterGoogle.addEventListener('click', async () => {
     } catch (error) {
         let errorCode = error.code;
         let errorMessage = error.message;
+        console.log(errorCode)
 
     }
 
