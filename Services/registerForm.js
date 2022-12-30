@@ -29,9 +29,8 @@ registerContainerForm.appendChild(inputPassword)
 const alreadyRegistered = document.createElement('a')
 const textAlreadyRegistered = "Already Sign up, click here!"
 alreadyRegistered.setAttribute("id", "alreadyRegistered")
-alreadyRegistered.setAttribute("href", "#")
 alreadyRegistered.innerText = (textAlreadyRegistered)
-registerContainerForm.appendChild(alreadyRegistered)
+
 
 
 const buttonContainer = document.createElement('div')
@@ -44,3 +43,4 @@ buttonRegister.setAttribute("id", "buttonRegister")
 buttonRegister.setAttribute("class", "buttonLogin")
 buttonContainer.appendChild(buttonRegister)
 registerContainerForm.appendChild(buttonContainer)
+registerContainerForm.appendChild(alreadyRegistered)
