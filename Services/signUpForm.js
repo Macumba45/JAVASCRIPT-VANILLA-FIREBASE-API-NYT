@@ -5,6 +5,8 @@ import { showMessage } from './showMessage.js'
 const userInfoProfile = 'userInfo'
 
 const signUpform = document.getElementById('formRegister')
+const spinnerElement = document.getElementById("spinner");
+spinnerElement.style.display = 'none'
 
 signUpform.addEventListener('submit', async (e) => {
 
@@ -13,6 +15,8 @@ signUpform.addEventListener('submit', async (e) => {
     const email = document.getElementById('email').value
     const password = document.getElementById('password').value
     const inputs = document.querySelectorAll('input');
+    spinnerElement.style.display = 'block'
+    formRegister.style.display = 'none'
     inputs.forEach(input => {
         input.value = '';
     });
@@ -39,14 +43,24 @@ signUpform.addEventListener('submit', async (e) => {
 
         if (error.code === 'auth/email-already-in-use') {
             showMessage('This email is already in used', "error")
+            spinnerElement.style.display = 'none'
+            formRegister.style.display = 'flex'
         } else if (error.code === '') {
             showMessage('Please, insert an email', "error")
+            spinnerElement.style.display = 'none'
+            formRegister.style.display = 'flex'
         } else if (error.code === 'auth/invalid-email') {
             showMessage('Invalid email', "error")
+            spinnerElement.style.display = 'none'
+            formRegister.style.display = 'flex'
         } else if (error.code === 'auth/weak-password') {
             showMessage('Password is too weak', "error")
+            spinnerElement.style.display = 'none'
+            formRegister.style.display = 'flex'
         } else if (error.code === "auth/internal-error") {
             showMessage('Something went wrong', "error")
+            spinnerElement.style.display = 'none'
+            formRegister.style.display = 'flex'
         }
 
     }

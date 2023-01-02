@@ -15,7 +15,6 @@ buttonRegisterFacebook.addEventListener('click', async () => {
 
     try {
         const credentials = await signInWithPopup(auth, provider)
-        console.log(credentials)
         showMessageLoginFacebook('Welcome ' + credentials.user.displayName, 'success')
         spinnerElement.style.display = 'block'
 
@@ -25,7 +24,12 @@ buttonRegisterFacebook.addEventListener('click', async () => {
         loginForm.style.display = 'none'
 
         window.localStorage.clear()
+        const apiDetailsPhoto = credentials.user.providerData[0].photoURL
+        const accessToken = credentials._tokenResponse.oauthAccessToken
+        const userPicProfile = apiDetailsPhoto + "?height=500&access_token=" + accessToken;
+        credentials.user.photoURL = userPicProfile
         window.localStorage.setItem(userInfoProfileFacebook, JSON.stringify(credentials.user))
+
 
         setTimeout(function () {
 

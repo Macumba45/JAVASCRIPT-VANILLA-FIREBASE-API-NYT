@@ -1,5 +1,4 @@
 const favBooksList = "favBooksList"
-
 setTimeout(function () {
 
     const bookDetailsObject = JSON.parse(window.localStorage.getItem(localStorageKeyDetails));
@@ -37,8 +36,6 @@ setTimeout(function () {
         });
 
     }
-
-
 }, 1500);
 
 

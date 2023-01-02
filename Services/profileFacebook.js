@@ -7,6 +7,7 @@ if (userInfoFacebook) {
     const userContainer = document.getElementById('profileView')
     const providerData = userInfoFacebook.providerData
     const emailproviderData = providerData[0].email
+    console.log(emailproviderData)
 
     const userElementImg = document.createElement('img')
     const userPicProfile = userInfoFacebook.photoURL

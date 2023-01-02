@@ -12,11 +12,11 @@ const span = document.querySelectorAll('span')
 spinnerElement.style.display = 'none'
 
 buttonRegisterGoogle.addEventListener('click', async () => {
-    const provider = new GoogleAuthProvider()
+    const provider = new GoogleAuthProvider();
+    provider.addScope("email");
 
     try {
         const credentials = await signInWithPopup(auth, provider)
-        console.log(credentials.user)
         showMessageLoginGoogle('Welcome ' + credentials.user.displayName, 'success')
         spinnerElement.style.display = 'block'
         loginForm.style.display = 'none'
