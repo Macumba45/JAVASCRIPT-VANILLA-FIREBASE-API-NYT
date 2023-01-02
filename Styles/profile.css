@@ -124,8 +124,9 @@ input:hover {
 
 }
 
-#imgUserGoogle {
-    width: 100px;
+#imgUserGoogle,
+#imgUserFacebook {
+    width: 80px;
     border-radius: 50px;
     margin-top: 30px;
     border: 2px solid gray;

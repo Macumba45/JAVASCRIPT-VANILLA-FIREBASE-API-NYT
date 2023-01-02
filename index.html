@@ -6,7 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New York Times - Login</title>
-    <link rel="icon" type="image/x-icon" href="./Img/the_new_york_times.ico">
+    <link rel="icon" type="image/x-icon" href="../Img/newYorkTimes.ico">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="./Styles/reset.css">
     <link rel="stylesheet" href="./Styles/nav.css">
     <link rel="stylesheet" href="./Styles/login.css">
@@ -16,20 +20,17 @@
 
 <body>
 
-
-
     <video autoplay muted loop playsinline preload="metadata" id="myVideo">
         <source src="./Img/Untitled.mp4" type="video/mp4">
     </video>
 
-    <script>
-        const vid = document.getElementById("myVideo");
-        vid.autoplay = true;
-        vid.load();
-    </script>
-
     <nav id="navLoginContainer">
-        <a id="navLogin" class="logged-out"> Login</a>
+        <span class="material-symbols-outlined">
+            person
+        </span><a id="navLogin" class="logged-out">Login</a>
+        <span class="material-symbols-outlined">
+            how_to_reg
+        </span>
         <a id="navRegister" class="logged-out"> Register</a>
         <a id="logout" class="logged-in"> Log Out</a>
     </nav>

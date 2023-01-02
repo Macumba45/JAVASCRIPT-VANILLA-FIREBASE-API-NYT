@@ -13,6 +13,11 @@
 
 }
 
+span {
+    color: white;
+    margin-right: 5px;
+}
+
 #formLogin {
 
     display: flex;
@@ -260,36 +265,74 @@ hr {
 
 /* @media(min-width: 600px) {
 
+    @media(min-width: 800px) {}
 
+    @media(min-width: 1100px) {
 
-    @media(min-width: 800px) {
 
         #formLogin {
-
-            grid-template-columns: 1fr 1fr;
-            grid-row: span;
-
-            width: 600px;
-            height: 300px;
+            width: 900px;
+            border: none;
+            margin-top: 130px;
+            height: 450px;
+            width: 1000px;
+            position: absolute;
+            left: 180px;
         }
 
         #textLogin {
+            position: absolute;
+            width: 200px;
+            left: 100px;
+            top: 250px;
+        }
+
+        #emailLogin {
+            position: absolute;
+            left: 370px;
+            top: 300px;
+        }
+
+        #passwordLogin {
+            position: absolute;
+            left: 370px;
+            top: 350px;
+        }
+
+        #buttonLogin {
+            position: absolute;
+            top: 325px;
+            left: 630px;
+        }
+
+        #buttonLoginDivGoogle {
+            position: absolute;
+            top: 300px;
+            left: 750px;
+        }
+
+        #buttonLoginDivgitHub {
+            position: absolute;
+            top: 340px;
+            left: 750px;
+        }
+
+        #buttonLoginDivFacebook {
+
+            position: absolute;
+            top: 380px;
+            left: 750px;
+        }
+
+        hr {
             display: none;
         }
 
-
-
-
-    }
-
-    @media(min-width: 1200px) {
-
-        #listBooks {
-
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-
+        #notRegistered {
+            position: absolute;
+            top: 500px;
+            font-size: 15px;
         }
-
 
     }
 

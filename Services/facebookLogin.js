@@ -7,6 +7,7 @@ const userInfoProfileFacebook = 'userInfoFacebook'
 
 
 const spinnerElement = document.getElementById("spinner");
+const span = document.querySelectorAll('span')
 spinnerElement.style.display = 'none'
 
 buttonRegisterFacebook.addEventListener('click', async () => {
@@ -17,6 +18,10 @@ buttonRegisterFacebook.addEventListener('click', async () => {
         console.log(credentials)
         showMessageLoginFacebook('Welcome ' + credentials.user.displayName, 'success')
         spinnerElement.style.display = 'block'
+
+        for (const icons of span) {
+            icons.style.display = 'none'
+        }
         loginForm.style.display = 'none'
 
         window.localStorage.clear()

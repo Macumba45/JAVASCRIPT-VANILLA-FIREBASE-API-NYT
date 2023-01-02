@@ -8,6 +8,7 @@ const buttonRegisterGoogle = document.getElementById('buttonRegisterGoogle')
 const loginForm = document.getElementById('formLogin')
 
 const spinnerElement = document.getElementById("spinner");
+const span = document.querySelectorAll('span')
 spinnerElement.style.display = 'none'
 
 buttonRegisterGoogle.addEventListener('click', async () => {
@@ -19,6 +20,10 @@ buttonRegisterGoogle.addEventListener('click', async () => {
         showMessageLoginGoogle('Welcome ' + credentials.user.displayName, 'success')
         spinnerElement.style.display = 'block'
         loginForm.style.display = 'none'
+
+        for (const icons of span) {
+            icons.style.display = 'none'
+        }
 
         window.localStorage.clear()
         window.localStorage.setItem(userInfoProfileGoogle, JSON.stringify(credentials.user))

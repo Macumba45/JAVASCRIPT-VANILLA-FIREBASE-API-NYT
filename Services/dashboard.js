@@ -48,13 +48,10 @@ async function postAllData() {
 
                 button.setAttribute("href", "../views/details.html")
                 button.innerText = ("Read more")
-
                 button.onclick = () => {
-                        localStorage.setItem(localStorageListName, item.list_name)
+                        localStorage.setItem(localStorageListName, item.list_name, item.updated)
 
                 }
-
-
                 const lineBook = document.createElement('hr')
                 lineBook.setAttribute("id", "lineaHr")
 
