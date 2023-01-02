@@ -15,6 +15,7 @@ buttonRegisterFacebook.addEventListener('click', async () => {
 
     try {
         const credentials = await signInWithPopup(auth, provider)
+        console.log(credentials)
         showMessageLoginFacebook('Welcome ' + credentials.user.displayName, 'success')
         spinnerElement.style.display = 'block'
 
