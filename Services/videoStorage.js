@@ -1,5 +1,7 @@
 if (window.caches) {
 
+
+
     caches.open('videoIndex')
 
     caches.open('videoIndex').then(cache => {
@@ -7,7 +9,6 @@ if (window.caches) {
         cache.addAll([
 
             '../Img/Untitled.mp4',
-            '../Img/Mivideo.webm',
             './index.html',
             '../Img/79-790806_new-york-times-logo-new-york-times-png.png',
             '../Services/loginForm.js',
@@ -23,6 +24,22 @@ if (window.caches) {
 
 
 }
+
+localVideo = function () {
+
+    const video = 'videoIndex'
+
+    const videoElement = document.querySelector('video')
+    console.log(videoElement)
+
+    const videoInLocalStorage = window.localStorage.setItem(video, '../Img/Untitled.mp4',)
+    console.log(videoInLocalStorage)
+
+}
+
+localVideo()
+
+
 
 
 
