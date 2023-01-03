@@ -13,7 +13,6 @@ setTimeout(function () {
         const imgElement = document.querySelectorAll('#favBookIcon')
 
         allBookTitles.forEach(title => {
-            console.log([title])
 
             for (let i = 0; i < imgElement.length; i++) {
 

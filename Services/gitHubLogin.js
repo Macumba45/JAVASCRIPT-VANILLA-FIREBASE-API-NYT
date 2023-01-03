@@ -9,7 +9,6 @@ buttonRegistergitHub.addEventListener('click', async () => {
 
     try {
         const credentials = await signInWithPopup(auth, provider)
-        console.log(credentials)
         showMessageLoginGithub('Welcome ' + credentials.user.displayName, 'success')
 
         for (const icons of span) {
