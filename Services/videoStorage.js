@@ -7,6 +7,7 @@ if (window.caches) {
         cache.addAll([
 
             '../Img/Untitled.mp4',
+            '../Img/Mivideo.webm',
             './index.html',
             '../Img/79-790806_new-york-times-logo-new-york-times-png.png',
             '../Services/loginForm.js',
