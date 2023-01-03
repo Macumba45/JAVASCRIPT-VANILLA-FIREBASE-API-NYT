@@ -25,6 +25,7 @@ export const loginCheck = user => {
         loggedInLinks.forEach(link => link.style.display = 'none')
 
 
+
         // if (document.URL.indexOf("profile.html") >= 0) {
 
         //     const navDashboard = document.getElementById('navDashboard')

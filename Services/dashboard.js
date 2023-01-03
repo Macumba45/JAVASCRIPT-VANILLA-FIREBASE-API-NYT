@@ -69,8 +69,3 @@ async function postAllData() {
 }
 
 postAllData()
-
-
-
-
-

@@ -1,7 +1,5 @@
 if (window.caches) {
 
-
-
     caches.open('videoIndex')
 
     caches.open('videoIndex').then(cache => {
@@ -16,13 +14,8 @@ if (window.caches) {
             '../Services/switchForm.js',
             '../Services/signUpForm.js',
             '../Services/loginUpForm.js',
-
-
         ])
-
     })
-
-
 }
 
 localVideo = function () {
@@ -31,11 +24,8 @@ localVideo = function () {
 
     const videoElement = document.querySelector('video')
     const logoIndex = document.querySelector('#textLogin')
-    console.log(videoElement)
-
     const videoInLocalStorage = window.localStorage.setItem(video, '../Img/Untitled.mp4',)
     const logoLocalStorage = window.localStorage.setItem('logoIndex', '../Img/79-790806_new-york-times-logo-new-york-times-png.png')
-    console.log(videoInLocalStorage)
 
 }
 
