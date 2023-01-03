@@ -9,6 +9,7 @@ if (window.caches) {
             '../Img/Untitled.mp4',
             './index.html',
             '../Img/79-790806_new-york-times-logo-new-york-times-png.png',
+            '../Services/main.js'
 
         ])
 
