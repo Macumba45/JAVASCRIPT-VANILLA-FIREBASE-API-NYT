@@ -56,6 +56,12 @@ a {
 
 }
 
+span {
+    color: white;
+    margin-right: 0.2rem;
+
+}
+
 #listBooks {
     display: grid;
     grid-template-columns: 1fr 1fr;

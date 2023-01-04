@@ -81,20 +81,13 @@ async function callBookDetails() {
         buttonAmazonContainer.appendChild(buttonAmazon)
         actualDetailBook.appendChild(buttonAmazonContainer)
 
-        const imgElement = document.getElementById('favBookIcon')
         const imgElementFilled = document.querySelectorAll('#favBookIconFilled')
 
         for (const hearth of imgElementFilled) {
             hearth.style.display = 'none'
-
         }
     }
-
-
-
 }
-
-
 
 callBookDetails()
 
