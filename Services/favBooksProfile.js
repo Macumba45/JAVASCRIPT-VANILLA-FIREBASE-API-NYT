@@ -6,8 +6,6 @@ booksFavContainer.setAttribute("id", "booksFavContainer")
 
 for (const favBooks of favBookList) {
 
-    console.log(favBooks)
-
     const body = document.querySelector('body')
 
     const individualFavBook = document.createElement('div')
