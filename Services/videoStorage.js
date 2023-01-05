@@ -14,6 +14,7 @@ if (window.caches) {
             '../Services/switchForm.js',
             '../Services/signUpForm.js',
             '../Services/loginUpForm.js',
+            '../Services/favBooks.js',
         ])
     })
 }
