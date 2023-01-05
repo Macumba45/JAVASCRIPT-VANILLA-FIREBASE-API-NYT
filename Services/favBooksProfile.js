@@ -1,5 +1,4 @@
 const favBookList = JSON.parse(window.localStorage.getItem('favBooksList'))
-console.log(favBookList)
 
 const booksFavContainer = document.createElement('div')
 booksFavContainer.setAttribute("id", "booksFavContainer")
@@ -34,6 +33,7 @@ else {
         const body = document.querySelector('body')
         const individualFavBook = document.createElement('div')
         individualFavBook.setAttribute("id", "allBooks")
+        individualFavBook.setAttribute("class", "allBooksClass")
         booksFavContainer.appendChild(individualFavBook)
         body.appendChild(booksFavContainer)
 
@@ -70,25 +70,47 @@ else {
         buttonAmazon.innerText = buttonAmazonText
         buttonAmazon.appendChild(buttonImgElement)
 
-        // const imgFavBookIcon = document.createElement('img')
-        // imgFavBookIcon.setAttribute("id", "favBookIcon")
-        // imgFavBookIcon.setAttribute("class", "classFavBookIcon")
-        // imgFavBookIcon.setAttribute('src', '../Img/icons8-favorite-100.png')
-        // buttonAmazonContainer.appendChild(imgFavBookIcon)
-
-        // const imgFavBookIconFilled = document.createElement('img')
-        // imgFavBookIconFilled.setAttribute("id", "favBookIconFilled")
-        // imgFavBookIconFilled.setAttribute("class", "classFavBookIconFilled")
-        // imgFavBookIconFilled.setAttribute('src', '../Img/icons8-favorite-100-filled.png')
-        // buttonAmazonContainer.appendChild(imgFavBookIconFilled)
+        const imgFavBookIconFilled = document.createElement('img')
+        imgFavBookIconFilled.setAttribute("id", "favBookIconFilled")
+        imgFavBookIconFilled.setAttribute("class", "classFavBookIconFilled")
+        imgFavBookIconFilled.setAttribute('src', '../Img/icons8-favorite-100-filled.png')
+        buttonAmazonContainer.appendChild(imgFavBookIconFilled)
 
         individualFavBook.appendChild(allTitleBook)
         individualFavBook.appendChild(showImg)
         individualFavBook.appendChild(elementWeekList)
         individualFavBook.appendChild(elementDescription)
-        // buttonAmazonContainer.appendChild(buttonAmazon)
+        buttonAmazonContainer.appendChild(buttonAmazon)
         individualFavBook.appendChild(buttonAmazonContainer)
 
+
+    }
+
+    const favBooksList = "favBooksList"
+    const bookDetailsObject = JSON.parse(window.localStorage.getItem("favBooksList"));
+    const imgElementFilled = document.getElementsByClassName('classFavBookIconFilled')
+    const booksObject = bookDetailsObject
+
+    arrBookFavs = JSON.parse(window.localStorage.getItem("favBooksList"));
+
+    for (let i = 0; i < imgElementFilled.length; i++) {
+
+        let title = booksObject[i].title
+
+        const allBooksClass = document.getElementsByClassName('allBooksClass')
+
+        imgElementFilled[i].addEventListener('click', () => {
+
+            setTimeout(() => {
+
+                imgElementFilled[i].style.display = 'none'
+                allBooksClass[i].style.display = 'none'
+                arrBookFavs = arrBookFavs.filter(books => books.title !== title)
+                window.localStorage.setItem(favBooksList, JSON.stringify(arrBookFavs))
+
+            }, 300);
+
+        })
     }
 
 
