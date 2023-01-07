@@ -1,9 +1,12 @@
+// import { } from "../Services/firebase.js";
+// import { db } from '../Services/firebase.js'
+
 setTimeout(function () {
 
     const favBooksList = "favBooksList"
-
-    const bookDetailsObject = JSON.parse(window.localStorage.getItem(localStorageKeyDetails));
-    const booksObject = bookDetailsObject.books
+    let categorieName = window.localStorage.getItem(localStorageListName);
+    const bookDetailsObject = JSON.parse(window.localStorage.getItem(localStorageKeyDetails + categorieName));
+    const booksObject = bookDetailsObject.results.books
 
     let arrBookFavs = []
 
@@ -35,9 +38,18 @@ setTimeout(function () {
 
         let title = booksObject[i].title
 
-        imgElement[i].addEventListener('click', () => {
+        imgElement[i].addEventListener('click', async () => {
             imgElement[i].style.display = 'none'
             imgElementFilled[i].style.display = 'flex'
+            // try {
+            //     const docRef = await addDoc(collection(db, "usersFavBooks"), {
+            //         title: title,
+
+            //     });
+            //     console.log("Document written with ID: ", docRef.id);
+            // } catch (e) {
+            //     console.error("Error adding document: ", e);
+            // }
             arrBookFavs.push(booksObject[i])
             window.localStorage.setItem(favBooksList, JSON.stringify(arrBookFavs))
         })

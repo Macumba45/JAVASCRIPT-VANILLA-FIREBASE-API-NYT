@@ -1,10 +1,10 @@
-// import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js"
-// import { auth } from './firebase.js'
+import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js"
+import { auth } from './firebase.js'
 
-// onAuthStateChanged(auth, async (user) => {
+onAuthStateChanged(auth, async (user) => {
 
-//     loginCheck(user)
-// })
+    loginCheck(user)
+})
 
 const loggedOutLink = document.querySelectorAll('.logged-out')
 const loggedInLinks = document.querySelectorAll('.logged-in')
@@ -26,55 +26,88 @@ export const loginCheck = user => {
 
 
 
-        // if (document.URL.indexOf("profile.html") >= 0) {
+        if (document.URL.indexOf("profile.html") >= 0) {
 
-        //     const navDashboard = document.getElementById('navDashboard')
-        //     const profileContainer = document.getElementById('backProfile')
-        //     navDashboard.style.display = 'none'
-        //     profileContainer.style.display = 'none'
+            const navDashboard = document.getElementById('navDashboard')
+            const profileContainer = document.getElementById('backProfile')
+            navDashboard.style.display = 'none'
+            profileContainer.style.display = 'none'
 
-        //     const body = document.querySelector('body')
-        //     const textElement = document.createElement('p')
-        //     textElement.setAttribute("id", "textElement")
-        //     const loginText = "Log for watch the app"
-        //     textElement.innerText = (loginText)
-        //     body.appendChild(textElement)
+            const body = document.querySelector('body')
+            const textElement = document.createElement('p')
+            textElement.setAttribute("id", "textElement")
+            const loginText = "Log for watch the app"
+            textElement.innerText = (loginText)
+            body.appendChild(textElement)
 
-        //     const alreadyRegistered = document.createElement('a')
-        //     const textAlreadyRegistered = "If you are not logged, click here!"
-        //     alreadyRegistered.setAttribute("id", "controlError")
-        //     alreadyRegistered.setAttribute("href", "../index.html")
-        //     alreadyRegistered.innerText = (textAlreadyRegistered)
-        //     body.appendChild(alreadyRegistered)
+            const alreadyRegistered = document.createElement('a')
+            const textAlreadyRegistered = "If you are not logged, click here!"
+            alreadyRegistered.setAttribute("id", "controlError")
+            alreadyRegistered.setAttribute("href", "../index.html")
+            alreadyRegistered.innerText = (textAlreadyRegistered)
+            body.appendChild(alreadyRegistered)
 
-        // } else if (document.URL.indexOf("details.html") >= 0) {
-
-
-
-        //     window.localStorage.clear()
-
-        //     const header = document.getElementById('cabezera')
-        //     const footer = document.getElementById('footer')
-        //     header.style.display = 'none'
-        //     footer.style.display = 'none'
-
-        //     const body = document.querySelector('body')
-        //     const textElement = document.createElement('p')
-        //     textElement.setAttribute("id", "textElement")
-        //     const loginText = "Log for watch the app"
-        //     textElement.innerText = (loginText)
-        //     body.appendChild(textElement)
-
-        //     const alreadyRegistered = document.createElement('a')
-        //     const textAlreadyRegistered = "If you are not logged, click here!"
-        //     alreadyRegistered.setAttribute("id", "controlError")
-        //     alreadyRegistered.setAttribute("href", "../index.html")
-        //     alreadyRegistered.innerText = (textAlreadyRegistered)
-        //     body.appendChild(alreadyRegistered)
+        } else if (document.URL.indexOf("details.html") >= 0) {
 
 
 
-        // }
+            window.localStorage.clear()
+
+            const header = document.getElementById('cabezera')
+            const footer = document.getElementById('footer')
+            header.style.display = 'none'
+            footer.style.display = 'none'
+
+            const body = document.querySelector('body')
+            const textElement = document.createElement('p')
+            textElement.setAttribute("id", "textElement")
+            const loginText = "Log for watch the app"
+            textElement.innerText = (loginText)
+            body.appendChild(textElement)
+
+            const alreadyRegistered = document.createElement('a')
+            const textAlreadyRegistered = "If you are not logged, click here!"
+            alreadyRegistered.setAttribute("id", "controlError")
+            alreadyRegistered.setAttribute("href", "../index.html")
+            alreadyRegistered.innerText = (textAlreadyRegistered)
+            body.appendChild(alreadyRegistered)
+
+
+
+        } else if (document.URL.indexOf("dashboard.html") >= 0) {
+
+
+            window.localStorage.clear()
+
+            const header = document.querySelector('header')
+            const nav = document.querySelector('#navDashboard')
+            const category = document.getElementById('titleBooks')
+            const footer = document.getElementById('footer')
+            const allListBooks = document.getElementById('allListBooks')
+
+            header.style.display = 'none'
+            nav.style.display = 'none'
+            footer.style.display = 'none'
+            category.style.display = 'none'
+            allListBooks.style.display = 'none'
+
+            const body = document.querySelector('body')
+            const textElement = document.createElement('p')
+            textElement.setAttribute("id", "textElement")
+            const loginText = "Log for watch the app"
+            textElement.innerText = (loginText)
+            body.appendChild(textElement)
+
+            const alreadyRegistered = document.createElement('a')
+            const textAlreadyRegistered = "If you are not logged, click here!"
+            alreadyRegistered.setAttribute("id", "controlError")
+            alreadyRegistered.setAttribute("href", "../index.html")
+            alreadyRegistered.innerText = (textAlreadyRegistered)
+            body.appendChild(alreadyRegistered)
+
+
+
+        }
 
 
 
