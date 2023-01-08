@@ -16,7 +16,10 @@ const fetchListBooks = async () => {
 
             }
         } catch (error) {
-
+            /*
+                Corrección
+                Debemos añadir un flujo al "catch" ya que la app no sabra como actuar cuando falle la llamada
+            */
         }
     }
 

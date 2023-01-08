@@ -1,5 +1,9 @@
 // import { } from "../Services/firebase.js";
 // import { db } from '../Services/firebase.js'
+/*
+    Corrección
+    Debemos eliminar import que no usamos
+*/
 
 setTimeout(function () {
 
@@ -17,6 +21,10 @@ setTimeout(function () {
 
     if (arrBookFavs !== null) {
 
+        /*
+            Corrección
+            Debemos usar FOR..OF
+        */
         for (let i = 0; i < booksObject.length; i++) {
 
             for (let j = 0; j < arrBookFavs.length; j++) {
@@ -34,6 +42,10 @@ setTimeout(function () {
         arrBookFavs = []
     }
 
+    /*
+        Corrección
+        Debemos usar FOR..OF
+    */
     for (let i = 0; i < imgElement.length; i++) {
 
         let title = booksObject[i].title
@@ -41,6 +53,10 @@ setTimeout(function () {
         imgElement[i].addEventListener('click', async () => {
             imgElement[i].style.display = 'none'
             imgElementFilled[i].style.display = 'flex'
+            /*
+                Corrección
+                Debemos eliminar comentarios innecesarios
+           */
             // try {
             //     const docRef = await addDoc(collection(db, "usersFavBooks"), {
             //         title: title,

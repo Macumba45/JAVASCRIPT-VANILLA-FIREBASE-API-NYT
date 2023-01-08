@@ -23,6 +23,11 @@ localVideo = function () {
 
     const video = 'videoIndex'
 
+    /*
+        Corrección
+        ¿Estos elementos se usan?
+    */
+
     const videoElement = document.querySelector('video')
     const logoIndex = document.querySelector('#textLogin')
     const videoInLocalStorage = window.localStorage.setItem(video, '../Img/Untitled.mp4',)

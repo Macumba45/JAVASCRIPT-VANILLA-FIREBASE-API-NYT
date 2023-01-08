@@ -19,6 +19,10 @@ async function postAllData() {
         spinnerElement.setAttribute('class', 'hidden')
         allBooks.removeAttribute('class', 'hidden')
 
+        /*
+          Corrección
+          Debemos usar un FOR..OF
+        */
         for (let i = 0; i < list.length; i++) {
 
                 const item = list[i]

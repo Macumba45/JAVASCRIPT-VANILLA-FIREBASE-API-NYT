@@ -1,3 +1,7 @@
+/*
+    Corrección
+    Realizar un JSON.parse a un valor que puede ser null nos puede ocasionar fallos incontrolados
+*/
 const favBookList = JSON.parse(window.localStorage.getItem('favBooksList'))
 
 const booksFavContainer = document.createElement('div')
@@ -93,6 +97,10 @@ else {
 
     arrBookFavs = JSON.parse(window.localStorage.getItem("favBooksList"));
 
+    /*
+        Corrección
+        Debemos usar FOR..OF
+    */
     for (let i = 0; i < imgElementFilled.length; i++) {
 
         let title = booksObject[i].title

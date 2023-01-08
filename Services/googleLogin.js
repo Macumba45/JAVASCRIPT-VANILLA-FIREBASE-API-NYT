@@ -39,7 +39,10 @@ buttonRegisterGoogle.addEventListener('click', async () => {
         let errorCode = error.code;
         let errorMessage = error.message;
         // console.log(errorCode)
-
+        /*
+            Corrección
+            Debemos añadir un flujo al "catch" ya que la app no sabra como actuar cuando falle la llamada
+        */
     }
 
 })
